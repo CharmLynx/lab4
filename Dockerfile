@@ -5,5 +5,5 @@ WORKDIR /usr/src/myapp
 
 RUN cargo build
 
-CMD ["cargo", "test", "-p", "ReferenceTypes_test", "ValueTypes_test"]
+CMD ["cargo", "test", "--test", "ReferenceTypes_test", "--test", "ValueTypes_test"]
 
