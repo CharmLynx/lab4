@@ -1,6 +1,5 @@
 FROM rust:latest
 
-COPY Cargo.toml /usr/src/myapp/
 WORKDIR /usr/src/myapp
 RUN cargo fetch
 
