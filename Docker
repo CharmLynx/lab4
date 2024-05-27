@@ -3,4 +3,7 @@ FROM rust:latest
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 
-RUN cargo test --test ReferenceTypes_test && cargo test --test ValueTypes_test
+RUN cargo build
+
+CMD ["cargo", "test", "-p", "ReferenceTypes_test", "ValueTypes_test"]
+
