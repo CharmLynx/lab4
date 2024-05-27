@@ -21,4 +21,5 @@ jobs:
     - name: Build and test
       run: |
         cargo build --verbose
-        cargo test --verbose
+        cargo test --verbose ReferenceTypes_test
+        cargo test --verbose ValueTypes_test
