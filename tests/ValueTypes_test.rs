@@ -1,3 +1,13 @@
+fn take_by_value(x: i32) -> i32 {
+    x + 1
+}
+
+fn main() {
+    let x = 42;
+    let y = take_by_value(x);
+    println!("x: {}, y: {}", x, y);
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
