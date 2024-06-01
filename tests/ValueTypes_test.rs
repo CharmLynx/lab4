@@ -1,4 +1,4 @@
-fn take_by_value(mut x: i32) -> i32 {
+fn take_by_value(x: i32) -> i32 {
     x += 1;
     x
 }
@@ -16,8 +16,10 @@ mod tests {
     #[test]
     fn test_value_is_copied() {
         let x = 42;
-        let x = take_by_value(x);
+        let x = match take_by_value(x) {
+            value if value >= 0 => value,
+            _ => x
+        };
         assert_eq!(x, 42);
-        //assert_eq!(y, 43);
     }
 }
