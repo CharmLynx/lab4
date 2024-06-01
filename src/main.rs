@@ -3,7 +3,7 @@ fn take_by_reference(x: &mut i32) {
 }
 
 fn take_by_value(x: i32) -> i32 {
-    x + 1
+    *x += 1
 }
 
 fn main() {
