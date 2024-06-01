@@ -9,6 +9,6 @@ fn take_by_value(mut x: i32) -> i32 {
 fn main() {
     let mut x = 42;
     take_by_reference(&mut x);
-    let y = take_by_value(x);
+    let x = take_by_value(x);
     println!("x: {}, y: {}", x, y);
 }
