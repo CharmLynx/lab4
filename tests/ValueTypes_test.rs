@@ -1,5 +1,5 @@
-fn take_by_value(x: i32) -> i32 {
-    x += 1
+fn take_by_value(mut x: i32) -> i32 {
+    x += 1;
     x
 }
 
