@@ -13,8 +13,9 @@ mod tests {
 
     #[test]
     fn test_reference_is_modified() {
-        let mut reference = 10;
-    take_by_reference(&mut reference);
-        assert_eq!(reference,20);
-    }
+       let mut reference = 10;
+       take_by_reference(&mut reference);
+       assert_eq!(reference, 20);
+}
+
 }
