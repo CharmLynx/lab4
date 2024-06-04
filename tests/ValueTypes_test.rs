@@ -13,8 +13,8 @@ mod tests {
 
     #[test]
     fn test_value_isnt_modified() {
-        let mut x = 5;
-        take_by_value(x);
-        assert_eq!(x, 5);
+        let mut value = 5;
+        take_by_value(value);
+        assert_eq!(value, 5);
     }
 }
