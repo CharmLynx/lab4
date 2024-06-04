@@ -7,8 +7,8 @@ fn take_by_reference(reference: &mut i32) {
 }
 
 fn main() {
-    let mut value = 5;
-    let mut reference = &mut 10;
+    let value = 5;
+    let reference = &mut 10;
     
     println!("Value type before modification: {:?}", value);
     take_by_value(value);
