@@ -1,12 +1,10 @@
-fn take_by_value(x: i32) -> i32 {
-    x += 1;
-    x
+fn take_by_value(mut value: i32) {
+    value += 13;
 }
 
 fn main() {
-    let x = 42;
-    let x = take_by_value(x);
-    println!("x: {}, y: {}", x, y);
+    let mut value = 5;
+    take_by_value(value);
 }
 
 #[cfg(test)]
@@ -14,12 +12,9 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_value_is_copied() {
-        let x = 42;
-        let x = match take_by_value(x) {
-            value if value >= 0 => value,
-            _ => x
-        };
+     fn test_value_isnt_modified() {
+        let mut x = 42;
+        take_by_reference(&mut x);
         assert_eq!(x, 42);
     }
 }
