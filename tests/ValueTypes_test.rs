@@ -12,9 +12,9 @@ mod tests {
     use super::*;
 
     #[test]
-     fn test_value_isnt_modified() {
-        let x = 42;
+    fn test_value_isnt_modified() {
+        let x = 5;
         take_by_value(x);
-        assert_eq!(x, 42);
+        assert_eq!(x, 5);
     }
 }
