@@ -3,7 +3,7 @@ fn take_by_value(mut value: i32) {
 }
 
 fn main() {
-    let value = 5;
+    let mut value = 5;
     take_by_value(value);
 }
 
@@ -13,7 +13,7 @@ mod tests {
 
     #[test]
     fn test_value_isnt_modified() {
-        let x = 5;
+        let mut x = 5;
         take_by_value(x);
         assert_eq!(x, 5);
     }
