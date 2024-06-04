@@ -14,7 +14,7 @@ mod tests {
     #[test]
      fn test_value_isnt_modified() {
         let mut x = 42;
-        take_by_reference(&mut x);
+        take_by_value(&mut x);
         assert_eq!(x, 42);
     }
 }
