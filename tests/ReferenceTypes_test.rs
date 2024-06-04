@@ -1,5 +1,5 @@
-fn take_by_reference(x: &mut i32) {
-    *x += 1;
+fn take_by_reference(reference: &mut i32) {
+    *reference += 10;
 }
 
 fn main() {
@@ -13,8 +13,8 @@ mod tests {
 
     #[test]
     fn test_reference_is_modified() {
-        let mut x = 42;
+        let mut x = 10;
         take_by_reference(&mut x);
-        assert_eq!(x, 43);
+        assert_eq!(x, 20);
     }
 }
