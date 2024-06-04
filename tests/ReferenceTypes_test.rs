@@ -3,8 +3,8 @@ fn take_by_reference(reference: &mut i32) {
 }
 
 fn main() {
-    let reference = &mut 10;
-    take_by_reference(reference);
+    let mut reference = 10;
+    take_by_reference(&mut reference);
 }
 
 #[cfg(test)]
@@ -13,8 +13,8 @@ mod tests {
 
     #[test]
     fn test_reference_is_modified() {
-        let x = 10;
+        let mut x = 10;
         take_by_reference(&mut x);
-        assert_eq!(x, 20);
+        assert_eq!(x,20);
     }
 }
