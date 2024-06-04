@@ -1,18 +1,21 @@
-fn take_by_reference(x: &mut i32) {
-    *x += 1;
+fn take_by_value(mut value: i32) {
+    value += 13;
 }
 
-fn take_by_value(y: i32) -> i32 { //не спрацює, оскільки по замовчуванню y - immutable argument
-    y += 1;
-    y
+fn take_by_reference(reference: &mut i32) {
+    *reference += 10;
 }
+
 fn main() {
-    let mut x = 42;
-    take_by_reference(&mut x);
-    let x = 42;
-    let x = match take_by_value(x) {
-       value if value >= 0 => value,
-       _ => x
-    };
-    println!("x: {}, y: {}", x, y);
+    let mut value = 5;
+    let mut reference = &mut 10;
+    
+    println!("Value type before modification: {:?}", value);
+    take_by_value(value);
+    println!("Value type after modification: {:?}", value);
+    
+    println!("Reference type before modification: {:?}", reference);
+   take_by_reference(reference);
+    println!("Reference type after modification: {:?}", reference);
+    
 }
